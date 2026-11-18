@@ -1,0 +1,51 @@
+table nederland_words
+	lineageTag: 75f86986-5517-46e9-ac98-0c310e43edb3
+
+	column country
+		dataType: string
+		lineageTag: 8a69073c-2735-4230-958a-9e64f5ed9a0f
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column word
+		dataType: string
+		lineageTag: a306d779-72b5-4d54-b946-64a61ca53de2
+		summarizeBy: none
+		sourceColumn: word
+
+		annotation SummarizationSetBy = Automatic
+
+	column word_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 4bf5a98b-424c-414d-842e-ab06aefa0d7b
+		summarizeBy: sum
+		sourceColumn: word_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column word_length
+		dataType: int64
+		formatString: 0
+		lineageTag: f224f6bf-6ccd-40e1-a3ec-0f5cbe622eab
+		summarizeBy: sum
+		sourceColumn: word_length
+
+		annotation SummarizationSetBy = Automatic
+
+	partition nederland_words = m
+		mode: import
+		source =
+				let
+				  Source = Csv.Document(File.Contents("C:\Users\Admin\Desktop\InHolland\European_National_Anthems_GitHub_Portfolio\data\nederland_words.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				  #"Promoted headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"country", type text}, {"word", type text}, {"word_count", Int64.Type}, {"word_length", Int64.Type}}, "en-US")
+				in
+				  #"Changed column type"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

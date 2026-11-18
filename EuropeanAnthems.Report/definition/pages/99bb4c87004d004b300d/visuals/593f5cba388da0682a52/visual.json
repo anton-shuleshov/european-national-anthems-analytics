@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "593f5cba388da0682a52",
+  "position": {
+    "x": 93.438776396975754,
+    "y": 0,
+    "z": 14,
+    "height": 88.09941774572,
+    "width": 1735.2915616581211,
+    "tabOrder": 14
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "EUROPEAN NATIONAL ANTHEMS | TEXT ANALYTICS",
+                    "textStyle": {
+                      "fontSize": "25pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Netherlands  •  Belgium  •  Germany  •  France",
+                    "textStyle": {
+                      "fontSize": "24pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

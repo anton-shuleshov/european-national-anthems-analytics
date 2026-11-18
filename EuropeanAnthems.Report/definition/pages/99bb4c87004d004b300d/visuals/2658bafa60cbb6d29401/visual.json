@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "2658bafa60cbb6d29401",
+  "position": {
+    "x": 784.88572173459636,
+    "y": 88.09941774572,
+    "z": 9,
+    "height": 133.48396628139395,
+    "width": 229.59242200399757,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All_words"
+                    }
+                  },
+                  "Property": "Langste woordlengte"
+                }
+              },
+              "queryRef": "All_words.Langste woordlengte",
+              "nativeQueryRef": "Langste woordlengte"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "All_words"
+                  }
+                },
+                "Property": "Langste woordlengte"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "32f29a638835ec4d4581",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All_words"
+              }
+            },
+            "Property": "Langste woordlengte"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

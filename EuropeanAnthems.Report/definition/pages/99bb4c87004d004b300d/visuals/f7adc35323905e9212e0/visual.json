@@ -1,0 +1,125 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "f7adc35323905e9212e0",
+  "position": {
+    "x": 1014.4781437385939,
+    "y": 784.88572173459636,
+    "z": 13,
+    "height": 280.31632919092726,
+    "width": 905.02129138785085,
+    "tabOrder": 13
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All_words"
+                    }
+                  },
+                  "Property": "country"
+                }
+              },
+              "queryRef": "All_words.country",
+              "nativeQueryRef": "country",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All_words"
+                    }
+                  },
+                  "Property": "country"
+                }
+              },
+              "queryRef": "All_words.country",
+              "nativeQueryRef": "country"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All_words"
+                    }
+                  },
+                  "Property": "Poetische complexiteit"
+                }
+              },
+              "queryRef": "All_words.Poetische complexiteit",
+              "nativeQueryRef": "Poetische complexiteit"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "All_words"
+                  }
+                },
+                "Property": "Poetische complexiteit"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8e1e2cd75989343b1b00",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All_words"
+              }
+            },
+            "Property": "country"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0eb5413188beb8b33b15",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All_words"
+              }
+            },
+            "Property": "Poetische complexiteit"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

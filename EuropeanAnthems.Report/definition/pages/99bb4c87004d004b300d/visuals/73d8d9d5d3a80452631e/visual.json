@@ -1,0 +1,125 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "73d8d9d5d3a80452631e",
+  "position": {
+    "x": 0,
+    "y": 784.88572173459636,
+    "z": 6,
+    "height": 280.31632919092726,
+    "width": 565.97201703311032,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All_words"
+                    }
+                  },
+                  "Property": "country"
+                }
+              },
+              "queryRef": "All_words.country",
+              "nativeQueryRef": "country",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All_words"
+                    }
+                  },
+                  "Property": "country"
+                }
+              },
+              "queryRef": "All_words.country",
+              "nativeQueryRef": "country"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All_words"
+                    }
+                  },
+                  "Property": "Gemiddelde woordlengte"
+                }
+              },
+              "queryRef": "All_words.Gemiddelde woordlengte",
+              "nativeQueryRef": "Gemiddelde woordlengte"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "All_words"
+                  }
+                },
+                "Property": "Gemiddelde woordlengte"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9843e1b9148659ba5757",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All_words"
+              }
+            },
+            "Property": "country"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d8a06ac18310de0d12b6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All_words"
+              }
+            },
+            "Property": "Gemiddelde woordlengte"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

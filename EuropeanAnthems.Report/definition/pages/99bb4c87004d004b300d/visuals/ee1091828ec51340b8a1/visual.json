@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "ee1091828ec51340b8a1",
+  "position": {
+    "x": 1014.4781437385939,
+    "y": 88.09941774572,
+    "z": 11,
+    "height": 133.48396628139395,
+    "width": 333.70991570348485,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All_words"
+                    }
+                  },
+                  "Property": "Langste woord"
+                }
+              },
+              "queryRef": "All_words.Langste woord",
+              "nativeQueryRef": "Langste woord"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3c689d4dc17a247c86ed",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All_words"
+              }
+            },
+            "Property": "Langste woord"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

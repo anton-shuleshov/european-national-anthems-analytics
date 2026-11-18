@@ -1,0 +1,125 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "f306c6b59063ab3d4a1e",
+  "position": {
+    "x": 1014.4781437385939,
+    "y": 224.2530633527418,
+    "z": 12,
+    "height": 560.63265838185453,
+    "width": 333.70991570348485,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All_words"
+                    }
+                  },
+                  "Property": "country"
+                }
+              },
+              "queryRef": "All_words.country",
+              "nativeQueryRef": "country",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All_words"
+                    }
+                  },
+                  "Property": "country"
+                }
+              },
+              "queryRef": "All_words.country",
+              "nativeQueryRef": "country"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All_words"
+                    }
+                  },
+                  "Property": "Woordenschat rijkdom"
+                }
+              },
+              "queryRef": "All_words.Woordenschat rijkdom",
+              "nativeQueryRef": "Woordenschat rijkdom"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "All_words"
+                  }
+                },
+                "Property": "Woordenschat rijkdom"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d34c4e122ae10d896b4e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All_words"
+              }
+            },
+            "Property": "Woordenschat rijkdom"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "eb39905f07114873e19a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All_words"
+              }
+            },
+            "Property": "country"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

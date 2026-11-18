@@ -1,0 +1,51 @@
+table duitsland_words
+	lineageTag: 927baab7-7fb4-45d0-9079-12ddee9e2da0
+
+	column country
+		dataType: string
+		lineageTag: f14ef18c-0b6a-4efa-b4aa-862c9284f8cf
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column word
+		dataType: string
+		lineageTag: 2f15ee65-ef5e-4197-a5b2-21bb05613bf2
+		summarizeBy: none
+		sourceColumn: word
+
+		annotation SummarizationSetBy = Automatic
+
+	column word_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d04645a-7a79-4605-af8b-c930a05c9356
+		summarizeBy: sum
+		sourceColumn: word_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column word_length
+		dataType: int64
+		formatString: 0
+		lineageTag: a46ca1eb-e3f6-4a4d-876a-2b16b0e9d2b8
+		summarizeBy: sum
+		sourceColumn: word_length
+
+		annotation SummarizationSetBy = Automatic
+
+	partition duitsland_words = m
+		mode: import
+		source =
+				let
+				  Source = Csv.Document(File.Contents("C:\Users\Admin\Desktop\InHolland\European_National_Anthems_GitHub_Portfolio\data\duitsland_words.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				  #"Promoted headers" = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Promoted headers", {{"country", type text}, {"word", type text}, {"word_count", Int64.Type}, {"word_length", Int64.Type}}, "en-US")
+				in
+				  #"Changed column type"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

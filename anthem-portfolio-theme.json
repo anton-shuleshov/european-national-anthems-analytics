@@ -1,0 +1,14 @@
+{
+  "name": "Anthem Portfolio Navy & Gold",
+  "dataColors": [
+    "#72C7BE",
+    "#86A8ED",
+    "#E8BC70",
+    "#E08B7C",
+    "#B4A3D9",
+    "#8AD2F2"
+  ],
+  "background": "#111B2E",
+  "foreground": "#F6F8FC",
+  "tableAccent": "#E8BC70"
+}

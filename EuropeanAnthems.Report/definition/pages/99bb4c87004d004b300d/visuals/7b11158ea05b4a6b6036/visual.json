@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "7b11158ea05b4a6b6036",
+  "position": {
+    "x": 630.04432084817938,
+    "y": 88.09941774572,
+    "z": 3,
+    "height": 133.48396628139395,
+    "width": 154.84140088641698,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All_words"
+                    }
+                  },
+                  "Property": "Verhouding"
+                }
+              },
+              "queryRef": "All_words.Verhouding",
+              "nativeQueryRef": "Verhouding"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "All_words"
+                  }
+                },
+                "Property": "Verhouding"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f4e76f9ad710432ec73b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All_words"
+              }
+            },
+            "Property": "Verhouding"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

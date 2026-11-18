@@ -1,0 +1,113 @@
+table All_words
+	lineageTag: f148821d-7be5-4edb-bca7-b306bfd15dca
+
+	measure 'Aantal woorden' = SUM(All_Words[word_count])
+		formatString: 0
+		lineageTag: 1837e44d-d870-4722-b353-be6f037f4fff
+
+	measure 'Aantal verschillende woorden' = DISTINCTCOUNT(All_Words[word])
+		formatString: 0
+		lineageTag: cd6cabb7-bd2d-4774-973d-ea9d26a8eaff
+
+	measure 'Gemiddelde woordlengte' =
+			
+			AVERAGE(All_Words[word_length])
+		lineageTag: 01759f87-ccd8-4ceb-af06-a2f53ca70af5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Langste woordlengte' =
+			
+			MAX(All_Words[word_length])
+		formatString: 0
+		lineageTag: 74778611-daed-4be3-b074-694e46f05876
+
+	measure Verhouding =
+			
+			DIVIDE(
+			    [Aantal woorden],
+			    [Aantal verschillende woorden]
+			)
+		lineageTag: fb6103a2-f617-42a6-b7d5-6f0c55e00399
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Langste woord' =
+			
+			VAR MaxLen = MAX(All_Words[word_length])
+			RETURN
+			CONCATENATEX(
+			    TOPN(
+			        1,
+			        FILTER(All_Words, All_Words[word_length] = MaxLen),
+			        All_Words[word],
+			        ASC
+			    ),
+			    All_Words[word],
+			    ", "
+			)
+		lineageTag: 6b4b54f5-a100-4e5a-a9ba-023af0d2d73d
+
+	measure 'Woordenschat rijkdom' =
+			
+			DIVIDE(
+			    [Aantal verschillende woorden],
+			    [Aantal woorden]
+			)
+		lineageTag: 11bbd6b8-e738-497c-be8d-0f2a9bc00871
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Poetische complexiteit' =
+			
+			[Gemiddelde woordlengte] * [Woordenschat rijkdom]
+		lineageTag: f4a1d43b-78b6-4f6d-89cc-d5250ce3eb63
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column country
+		dataType: string
+		lineageTag: 3ff621af-9bc6-40a3-98db-c5a0dad56c5d
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column word
+		dataType: string
+		lineageTag: 552c2ae7-4a31-4646-91ec-bffb7d6c4108
+		summarizeBy: none
+		sourceColumn: word
+
+		annotation SummarizationSetBy = Automatic
+
+	column word_count
+		dataType: int64
+		formatString: 0
+		lineageTag: 22cda332-07cc-4033-92e9-79257d653bb0
+		summarizeBy: sum
+		sourceColumn: word_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column word_length
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b349195-9175-422d-9349-473f25ca6d8d
+		summarizeBy: sum
+		sourceColumn: word_length
+
+		annotation SummarizationSetBy = Automatic
+
+	partition All_words = m
+		mode: import
+		source =
+				let
+				    Source = Table.Combine({belgie_words, duitsland_words, frankrijk_words, nederland_words})
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

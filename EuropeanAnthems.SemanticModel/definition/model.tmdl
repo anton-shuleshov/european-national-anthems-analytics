@@ -1,0 +1,22 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: ru-RU
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["belgie_words","duitsland_words","frankrijk_words","nederland_words","All_words"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table belgie_words
+ref table duitsland_words
+ref table frankrijk_words
+ref table nederland_words
+ref table All_words
+
+ref cultureInfo en-US
+

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "e2136350430417a08518",
+  "position": {
+    "x": 176.19883549144,
+    "y": 88.09941774572,
+    "z": 1,
+    "height": 133.48396628139395,
+    "width": 237.6014599808812,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All_words"
+                    }
+                  },
+                  "Property": "Aantal verschillende woorden"
+                }
+              },
+              "queryRef": "All_words.Aantal verschillende woorden",
+              "nativeQueryRef": "Aantal verschillende woorden"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "All_words"
+                  }
+                },
+                "Property": "Aantal verschillende woorden"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7c26fec22c7221ab5429",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All_words"
+              }
+            },
+            "Property": "Aantal verschillende woorden"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+relationship AutoDetected_dad675b8-9f7b-471b-aa04-59dfb2f272c2
+	fromColumn: All_words.word
+	toColumn: belgie_words.word
+

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "ba179f09a3155031129b",
+  "position": {
+    "x": 413.80029547232118,
+    "y": 88.09941774572,
+    "z": 2,
+    "height": 133.48396628139395,
+    "width": 216.24402537585817,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All_words"
+                    }
+                  },
+                  "Property": "Gemiddelde woordlengte"
+                }
+              },
+              "queryRef": "All_words.Gemiddelde woordlengte",
+              "nativeQueryRef": "Gemiddelde woordlengte"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "All_words"
+                  }
+                },
+                "Property": "Gemiddelde woordlengte"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0759ef22a84942b99a43",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All_words"
+              }
+            },
+            "Property": "Gemiddelde woordlengte"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
