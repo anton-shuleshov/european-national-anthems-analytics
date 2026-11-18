@@ -72,7 +72,7 @@ This project connects **text processing, data preparation, semantic modeling and
 - `EuropeanAnthems.Report/` — editable PBIR report definition
 - `EuropeanAnthems.SemanticModel/` — Power BI semantic model and DAX measures
 - `anthem-portfolio-theme.json` — optional navy / gold theme
-- `assets/dashboard-preview.jpg` — source-derived preview photo
+- `assets/Dashbord-preview.png` — source-derived preview photo
 
 ## Next improvement
 
