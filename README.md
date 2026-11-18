@@ -2,7 +2,7 @@
 
 A comparative text-analytics project examining the national anthems of **the Netherlands, Belgium, Germany, and France**. Developed as part of the Post-HBO Big Data Business Analist coursework at Inholland Academy.
 
-![Original Power BI report screenshot](assets/dashboard-preview.jpg)
+![Original Power BI report screenshot](assets/Dashbord-preview.png)
 
 > **Screenshot note:** This is a cropped photograph of the original Power BI report. The editable report includes updated English visual headings. The screenshot is not a newly rendered export of that updated report; replace it with a direct Power BI screenshot after opening the project.
 
