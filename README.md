@@ -29,7 +29,7 @@ How do the four national anthems compare in length, lexical diversity, word leng
 | Longest Word Length | `MAX(All_Words[word_length])` |
 | Poetic Complexity Index | Average Word Length × Vocabulary Richness |
 
-The source model retains Dutch internal measure names so existing report references continue to work; English visual titles are provided for portfolio presentation.
+**Metric interpretation:** The original Power BI measure `AVERAGE(All_Words[word_length])` is the unweighted average across word-frequency rows. The Pig/Hive scripts additionally calculate a frequency-weighted mean, `SUM(word_length * word_count) / SUM(word_count)`, representing the average across word occurrences. These are intentionally distinct measures and should not be compared as though they were identical. The source model retains Dutch internal measure names so existing report references continue to work; English visual titles are provided for portfolio presentation.
 
 ## End-to-end analytical workflow
 
@@ -78,6 +78,6 @@ This project connects **text processing, data preparation, semantic modeling and
 - `hive/anthem_analysis.hql` — Hive external tables and country metrics
 - `PROCESSING_GUIDE.md` — setup, definitions and reproducibility limitations
 
-## Next improvement
+## Opening and refreshing the report
 
-Update the Power Query paths to use the four CSV inputs already included in `data/`; refresh in Power BI and, if needed, rerun the published Pig/Hive scripts in a compatible environment, and capture a clean screenshot of the English-labelled report.
+To refresh on a different computer, update the four Power Query file paths to the CSV files in `data/`. A clean screenshot can be exported from Power BI Desktop after opening the report. The included preview remains the original project screenshot.
