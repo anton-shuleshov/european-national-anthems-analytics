@@ -1,6 +1,6 @@
 # Pig and Hive processing
 
-These are **new reproducibility scripts** written from the four existing country-level word-frequency CSVs in `data/`. They are not recovered original coursework scripts. Their execution has not been verified in a Pig/Hive runtime.
+The coursework used **Hadoop, Apache Pig and Apache Hive** to process and analyse national-anthem vocabulary before preparing the CSV datasets used in Power BI. This folder provides scripts for working with the word-frequency datasets retained in the repository. The exact historical execution logs are not included, and these particular repository scripts have not been rerun in the current environment.
 
 ## Input
 Each CSV has the fields `country,word,word_count,word_length`. Each row represents a distinct word with its frequency, not an individual word occurrence.
@@ -31,4 +31,4 @@ Replace YOUR_USERNAME with your HDFS username.
 ## Definitions and limitations
 Total words = SUM(word_count). Unique words = count of distinct word strings per country. Vocabulary richness = unique words / total occurrences. Weighted average word length = SUM(word_length * word_count) / SUM(word_count).
 
-The original Power BI measure AVERAGE(word_length) is an unweighted average over word rows, so it has a different interpretation. These scripts analyse the already-tokenized CSVs; they do not reproduce extraction or tokenization of the full anthem texts. No Hadoop execution results are claimed.
+The original Power BI measure AVERAGE(word_length) is an unweighted average over word rows, so it has a different interpretation. These scripts analyse the already-tokenized CSVs; they do not reproduce extraction or tokenization of the full anthem texts. The coursework processing was performed in Hadoop; no execution logs for these particular repository scripts are included.
