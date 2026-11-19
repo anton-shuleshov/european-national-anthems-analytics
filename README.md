@@ -54,7 +54,7 @@ This project connects **text processing, data preparation, semantic modeling and
 
 1. Download or clone the repository.
 2. Open `EuropeanAnthems.pbip` in a recent Power BI Desktop version supporting PBIP / PBIR.
-3. The Power Query sources currently refer to CSV files on the original computer (`C:\Users\Admin\Desktop\InHolland\...`). **Those CSV files are not in the supplied archive.** If you refresh the model, update the four file paths and provide the original CSVs.
+3. The Power Query sources currently refer to CSV files on the original computer (`C:\Users\Admin\Desktop\InHolland\...`). The four CSV files are included in the repository's `data/` folder. To refresh the model, update the four Power Query source paths to point to those downloaded files.
 4. The included `anthem-portfolio-theme.json` can be imported manually using **View → Themes → Browse for themes** if you want to refine the visual palette further.
 5. Check all visuals and replace `assets/dashboard-preview.jpg` with a clean screenshot captured directly from the opened report.
 
@@ -64,7 +64,7 @@ This project connects **text processing, data preparation, semantic modeling and
 - Tokenization, text normalization, and source-text versions are not verifiable from the provided project archive alone.
 - Some metrics are aggregated over the combined table; country selections change their meaning.
 - Basemap place-name language may follow the Power BI map service, locale, and client settings rather than the report's English titles.
-- The model's local CSV references mean the project may open from cached metadata but cannot be reliably refreshed without the missing source files.
+- The model retains machine-specific CSV source paths; refresh requires updating them to the four CSV files included in `data/`.
 
 ## Repository contents
 
@@ -73,7 +73,8 @@ This project connects **text processing, data preparation, semantic modeling and
 - `EuropeanAnthems.SemanticModel/` — Power BI semantic model and DAX measures
 - `anthem-portfolio-theme.json` — optional navy / gold theme
 - `assets/Dashbord-preview.png` — source-derived preview photo
+- `data/` — four country-specific CSV inputs
 
 ## Next improvement
 
-Add the original four CSV inputs and, if available, the Pig/Hive transformation scripts; then refresh in Power BI and capture a new screenshot of the English-labelled report.
+Update the Power Query paths to use the four CSV inputs already included in `data/`; if available, add Pig/Hive transformation scripts, refresh in Power BI, and capture a clean screenshot of the English-labelled report.
