@@ -37,7 +37,7 @@ This project connects **text processing, data preparation, semantic modeling and
 
 1. **Problem framing:** define comparable indicators across four national anthems and identify the limitations of cross-language comparisons.
 2. **Data preparation:** structure country-specific word records and metrics into tabular datasets suitable for analysis.
-3. **Big-data coursework:** work with the Hadoop ecosystem, including **Apache Pig** and **Apache Hive**, to explore transformation and querying workflows. The original Pig scripts, Hive queries and execution logs are not bundled here; the repository documents the coursework workflow, not reproducible executions.
+3. **Big-data coursework:** work with the Hadoop ecosystem, including **Apache Pig** and **Apache Hive**, to explore transformation and querying workflows. New reproducibility scripts based on the published CSVs are provided in `pig/` and `hive/`. They are not the recovered original coursework scripts, and execution logs are not included.
 4. **Power Query (M):** import and combine country-level data, prepare column types and establish a consolidated analytical table.
 5. **DAX and modeling:** define word-count, lexical-diversity and derived comparison measures.
 6. **Visual analytics:** build an interactive country comparison using KPIs, frequency charts and geographic context.
@@ -48,7 +48,7 @@ This project connects **text processing, data preparation, semantic modeling and
 - **Power BI Desktop** and **DAX**
 - **Power Query (M)** for combining country-level word tables
 - **CSV** input tables (referenced by the Power Query model)
-- Coursework context: Hadoop / Pig / Hive; **the processing scripts are not included in this repository**, so their execution is not independently documented here.
+- Hadoop / Pig / Hive: newly prepared processing scripts are included in `pig/` and `hive/`; they have not been independently executed in this repository.
 
 ## How to open
 
@@ -74,7 +74,10 @@ This project connects **text processing, data preparation, semantic modeling and
 - `anthem-portfolio-theme.json` — optional navy / gold theme
 - `assets/Dashbord-preview.png` — source-derived preview photo
 - `data/` — four country-specific CSV inputs
+- `pig/anthem_analysis.pig` — word-frequency aggregation in Apache Pig
+- `hive/anthem_analysis.hql` — Hive external tables and country metrics
+- `PROCESSING_GUIDE.md` — setup, definitions and reproducibility limitations
 
 ## Next improvement
 
-Update the Power Query paths to use the four CSV inputs already included in `data/`; if available, add Pig/Hive transformation scripts, refresh in Power BI, and capture a clean screenshot of the English-labelled report.
+Update the Power Query paths to use the four CSV inputs already included in `data/`; run and validate the provided Pig/Hive scripts in a compatible environment, refresh in Power BI, and capture a clean screenshot of the English-labelled report.
