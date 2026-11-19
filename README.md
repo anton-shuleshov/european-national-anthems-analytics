@@ -37,7 +37,7 @@ This project connects **text processing, data preparation, semantic modeling and
 
 1. **Problem framing:** define comparable indicators across four national anthems and identify the limitations of cross-language comparisons.
 2. **Data preparation:** structure country-specific word records and metrics into tabular datasets suitable for analysis.
-3. **Big-data coursework:** work with the Hadoop ecosystem, including **Apache Pig** and **Apache Hive**, to explore transformation and querying workflows. New reproducibility scripts based on the published CSVs are provided in `pig/` and `hive/`. They are not the recovered original coursework scripts, and execution logs are not included.
+3. **Big-data coursework:** work with the Hadoop ecosystem, including **Apache Pig** and **Apache Hive**, to explore transformation and querying workflows. The coursework workflow used Hadoop, Pig and Hive before the results were exported to CSV for Power BI. The repository includes Pig and Hive scripts documenting the word-level analysis; original execution logs are not included.
 4. **Power Query (M):** import and combine country-level data, prepare column types and establish a consolidated analytical table.
 5. **DAX and modeling:** define word-count, lexical-diversity and derived comparison measures.
 6. **Visual analytics:** build an interactive country comparison using KPIs, frequency charts and geographic context.
@@ -48,7 +48,7 @@ This project connects **text processing, data preparation, semantic modeling and
 - **Power BI Desktop** and **DAX**
 - **Power Query (M)** for combining country-level word tables
 - **CSV** input tables (referenced by the Power Query model)
-- Hadoop / Pig / Hive: newly prepared processing scripts are included in `pig/` and `hive/`; they have not been independently executed in this repository.
+- **Apache Hadoop, Pig and Hive** — used in the coursework processing stage; corresponding analysis scripts are available in `pig/` and `hive/`.
 
 ## How to open
 
@@ -80,4 +80,4 @@ This project connects **text processing, data preparation, semantic modeling and
 
 ## Next improvement
 
-Update the Power Query paths to use the four CSV inputs already included in `data/`; run and validate the provided Pig/Hive scripts in a compatible environment, refresh in Power BI, and capture a clean screenshot of the English-labelled report.
+Update the Power Query paths to use the four CSV inputs already included in `data/`; refresh in Power BI and, if needed, rerun the published Pig/Hive scripts in a compatible environment, and capture a clean screenshot of the English-labelled report.
