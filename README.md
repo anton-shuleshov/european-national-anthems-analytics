@@ -4,7 +4,7 @@ A comparative text-analytics project examining the national anthems of **the Net
 
 ![Original Power BI report screenshot](assets/Dashbord-preview.png)
 
-> **Screenshot note:** This is a cropped photograph of the original Power BI report. The editable report includes updated English visual headings. The screenshot is not a newly rendered export of that updated report; replace it with a direct Power BI screenshot after opening the project.
+> **Preview:** Screenshot from the original Power BI report. The editable project files are available below.
 
 ## Business / analytical question
 
@@ -50,13 +50,21 @@ This project connects **text processing, data preparation, semantic modeling and
 - **CSV** input tables (referenced by the Power Query model)
 - **Apache Hadoop, Pig and Hive** — used in the coursework processing stage; corresponding analysis scripts are available in `pig/` and `hive/`.
 
+## Explore the project
+
+- [Power BI report (.pbix)](EuropeanAnthems.pbix)
+- [Power BI project (.pbip)](EuropeanAnthems.pbip)
+- [PDF report](EuropeanAnthems.pdf)
+- [Pig script](pig/anthem_analysis.pig) · [HiveQL script](hive/anthem_analysis.hql)
+- [Processing guide](PROCESSING_GUIDE.md) · [CSV datasets](data/)
+
 ## How to open
 
 1. Download or clone the repository.
 2. Open `EuropeanAnthems.pbip` in a recent Power BI Desktop version supporting PBIP / PBIR.
 3. The Power Query sources currently refer to CSV files on the original computer (`C:\Users\Admin\Desktop\InHolland\...`). The four CSV files are included in the repository's `data/` folder. To refresh the model, update the four Power Query source paths to point to those downloaded files.
 4. The included `anthem-portfolio-theme.json` can be imported manually using **View → Themes → Browse for themes** if you want to refine the visual palette further.
-5. Check all visuals and replace `assets/Dashbord-preview.png` with a clean screenshot captured directly from the opened report.
+5. Check the visuals and optionally export an updated screenshot from Power BI Desktop.
 
 ## Data and interpretation caveats
 
@@ -78,6 +86,3 @@ This project connects **text processing, data preparation, semantic modeling and
 - `hive/anthem_analysis.hql` — Hive external tables and country metrics
 - `PROCESSING_GUIDE.md` — setup, definitions and reproducibility limitations
 
-## Opening and refreshing the report
-
-To refresh on a different computer, update the four Power Query file paths to the CSV files in `data/`. A clean screenshot can be exported from Power BI Desktop after opening the report. The included preview remains the original project screenshot.
