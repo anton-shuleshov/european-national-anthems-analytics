@@ -56,7 +56,7 @@ This project connects **text processing, data preparation, semantic modeling and
 2. Open `EuropeanAnthems.pbip` in a recent Power BI Desktop version supporting PBIP / PBIR.
 3. The Power Query sources currently refer to CSV files on the original computer (`C:\Users\Admin\Desktop\InHolland\...`). The four CSV files are included in the repository's `data/` folder. To refresh the model, update the four Power Query source paths to point to those downloaded files.
 4. The included `anthem-portfolio-theme.json` can be imported manually using **View → Themes → Browse for themes** if you want to refine the visual palette further.
-5. Check all visuals and replace `assets/dashboard-preview.jpg` with a clean screenshot captured directly from the opened report.
+5. Check all visuals and replace `assets/Dashbord-preview.png` with a clean screenshot captured directly from the opened report.
 
 ## Data and interpretation caveats
 
